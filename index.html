@@ -1,0 +1,2100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ROZE BioHealth & BioDental Clinics | Dubai</title>
+  <meta name="description" content="Discover a holistic approach to healthcare and biological dentistry at ROZE BioHealth and BioDental Clinics in Dubai. Explore our clinics and services.">
+  <meta name="theme-color" content="#F3EDE8">
+
+  <!-- Correct Google Fonts import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #F3EDE8;
+      --black: #111111;
+      --white: #FFFFFF;
+      --grey: #77716D;
+      --light-grey: #E8E1DC;
+      --border: rgba(17, 17, 17, 0.14);
+      --heading-font: "DM Serif Display", Georgia, serif;
+      --body-font: "Manrope", Arial, sans-serif;
+      --container: 1240px;
+      --radius: 4px;
+      --transition: 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: var(--body-font);
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 64px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--heading-font);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(48px, 6.3vw, 88px);
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-size: clamp(38px, 4.5vw, 62px);
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    p {
+      color: var(--grey);
+    }
+
+    .section-padding {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 54px;
+    }
+
+    .section-heading p {
+      max-width: 570px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-heading.center .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading.center p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 54px;
+      padding: 15px 25px;
+      border: 1px solid var(--black);
+      background: var(--black);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--black);
+    }
+
+    .btn-light {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .btn-light:hover {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--black);
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .arrow {
+      font-size: 17px;
+      line-height: 1;
+      transition: transform var(--transition);
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Image handling and fallback */
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: var(--primary);
+      isolation: isolate;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.035);
+    }
+
+    .image-frame.image-failed::after {
+      content: "ROZE BIOHEALTH & BIODENTAL";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      color: var(--black);
+      background: var(--primary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    /* Announcement bar */
+
+    .announcement {
+      padding: 9px 20px;
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Header */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 88px;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .brand-name {
+      font-family: var(--heading-font);
+      font-size: 39px;
+      letter-spacing: 2px;
+    }
+
+    .brand-subtitle {
+      margin-top: 7px;
+      font-size: 7px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      position: relative;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .main-nav a:not(.nav-cta)::after {
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 1px;
+      background: var(--black);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+
+    .main-nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      padding: 14px 19px;
+      background: var(--black);
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: #333;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 19px;
+      height: 1px;
+      margin: 5px auto;
+      background: var(--black);
+      transition: var(--transition);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      background: var(--primary);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 90px max(40px, calc((100vw - var(--container)) / 2));
+      padding-right: 55px;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 470px;
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .hero-note {
+      margin-top: 45px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-image {
+      min-height: 690px;
+    }
+
+    .hero-image img {
+      object-position: center;
+    }
+
+    .hero-image::before {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(17,17,17,0.08), transparent 45%);
+      content: "";
+      pointer-events: none;
+    }
+
+    /* Brand principles */
+
+    .principles {
+      padding: 25px 0;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .principles-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .principle {
+      padding: 10px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .principle + .principle {
+      border-left: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Introduction */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .intro-copy h2 {
+      max-width: 650px;
+    }
+
+    .intro-copy p {
+      max-width: 550px;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .intro-copy .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--black);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .intro-visual {
+      min-height: 480px;
+    }
+
+    .intro-visual img {
+      min-height: 480px;
+    }
+
+    /* Service pathways */
+
+    .services-section {
+      background: var(--primary);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .service-card .image-frame {
+      position: absolute;
+      inset: 0;
+      background: #D8D0CA;
+    }
+
+    .service-card .image-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.05) 75%);
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 2;
+      padding: 32px;
+    }
+
+    .service-card-content .number {
+      display: block;
+      margin-bottom: 14px;
+      color: rgba(255,255,255,0.75);
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .service-card h3 {
+      font-size: 34px;
+    }
+
+    .service-card p {
+      max-width: 320px;
+      margin-top: 12px;
+      color: rgba(255,255,255,0.8);
+      font-size: 12px;
+    }
+
+    .service-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Philosophy / story */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .story-image {
+      min-height: 570px;
+    }
+
+    .story-image img {
+      min-height: 570px;
+    }
+
+    .story-copy h2 {
+      max-width: 600px;
+    }
+
+    .story-copy p {
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    .story-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+    }
+
+    .story-value strong {
+      display: block;
+      font-family: var(--heading-font);
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .story-value span {
+      display: block;
+      margin-top: 5px;
+      color: var(--grey);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Expertise */
+
+    .expertise-section {
+      background: var(--primary);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .expertise-card {
+      min-height: 225px;
+      padding: 35px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+    }
+
+    .expertise-card:hover {
+      background: var(--white);
+    }
+
+    .expertise-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 23px;
+      border: 1px solid var(--black);
+      border-radius: 50%;
+    }
+
+    .expertise-icon svg {
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .expertise-card h3 {
+      font-size: 25px;
+    }
+
+    .expertise-card p {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    /* Patient journey */
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .journey-step {
+      padding-top: 25px;
+      border-top: 1px solid var(--black);
+    }
+
+    .journey-number {
+      display: block;
+      margin-bottom: 30px;
+      font-family: var(--heading-font);
+      font-size: 40px;
+    }
+
+    .journey-step h3 {
+      font-size: 25px;
+    }
+
+    .journey-step p {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    /* Faircare */
+
+    .faircare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 470px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .faircare-image {
+      min-height: 470px;
+    }
+
+    .faircare-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 70px 9%;
+    }
+
+    .faircare-copy h2 {
+      max-width: 500px;
+    }
+
+    .faircare-copy p {
+      max-width: 480px;
+      margin-top: 22px;
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+    }
+
+    .faircare-copy .btn {
+      margin-top: 30px;
+    }
+
+    .faircare-note {
+      margin-top: 18px;
+      color: rgba(255,255,255,0.55);
+      font-size: 10px;
+    }
+
+    /* Clinics */
+
+    .clinics-section {
+      background: var(--white);
+    }
+
+    .clinic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .clinic-card {
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .clinic-image {
+      height: 260px;
+    }
+
+    .clinic-content {
+      padding: 27px;
+    }
+
+    .clinic-type {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--grey);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .clinic-content h3 {
+      font-size: 29px;
+    }
+
+    .clinic-address {
+      min-height: 55px;
+      margin-top: 13px;
+      font-size: 12px;
+    }
+
+    .clinic-details {
+      margin-top: 20px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+    }
+
+    .clinic-details p {
+      margin: 7px 0;
+      font-size: 11px;
+    }
+
+    .clinic-details strong {
+      color: var(--black);
+    }
+
+    .clinic-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .clinic-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 13px;
+      border: 1px solid var(--black);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .clinic-actions a:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      background: var(--primary);
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+    }
+
+    .faq-intro p {
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 23px 0;
+      border: 0;
+      background: transparent;
+      color: var(--black);
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--heading-font);
+      font-size: 23px;
+    }
+
+    .faq-symbol {
+      flex-shrink: 0;
+      margin-left: 20px;
+      font-family: var(--body-font);
+      font-size: 22px;
+      transition: transform var(--transition);
+    }
+
+    .faq-answer {
+      display: none;
+      max-width: 600px;
+      padding: 0 35px 23px 0;
+      color: var(--grey);
+      font-size: 12px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-symbol {
+      transform: rotate(45deg);
+    }
+
+    /* Final CTA */
+
+    .final-cta {
+      padding: 105px 25px;
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .final-cta .eyebrow {
+      justify-content: center;
+    }
+
+    .final-cta h2 {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .final-cta p {
+      max-width: 550px;
+      margin: 20px auto 0;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+    }
+
+    .final-cta .btn {
+      margin-top: 30px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 75px 0 25px;
+      background: var(--primary);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+      gap: 50px;
+      padding-bottom: 55px;
+    }
+
+    .footer-brand p {
+      max-width: 300px;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 20px;
+      font-family: var(--body-font);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      display: block;
+      margin: 10px 0;
+      color: var(--grey);
+      font-size: 11px;
+    }
+
+    .footer-column a:hover {
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--grey);
+      font-size: 10px;
+    }
+
+    /* Mobile contact bar */
+
+    .mobile-contact {
+      display: none;
+    }
+
+    /* Reveal animation */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 1050px) {
+      .main-nav {
+        gap: 15px;
+      }
+
+      .main-nav a {
+        font-size: 9px;
+      }
+
+      .hero-content {
+        padding-left: 40px;
+      }
+
+      .intro-grid,
+      .story-grid,
+      .faq-layout {
+        gap: 50px;
+      }
+
+      .footer-grid {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        width: min(100% - 40px, var(--container));
+      }
+
+      .section-padding {
+        padding: 75px 0;
+      }
+
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 25px 25px 110px;
+        background: var(--white);
+        overflow-y: auto;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: var(--transition);
+      }
+
+      .main-nav.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .main-nav a {
+        padding: 19px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 12px;
+      }
+
+      .main-nav .nav-cta {
+        margin-top: 20px;
+        padding: 17px;
+        border: 0;
+        text-align: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 75px 30px;
+      }
+
+      .hero-image {
+        min-height: 440px;
+        grid-row: 1;
+      }
+
+      .hero-image img {
+        height: 440px;
+      }
+
+      .principles-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .principle + .principle {
+        border-top: 1px solid rgba(255,255,255,0.25);
+        border-left: 0;
+      }
+
+      .intro-grid,
+      .story-grid,
+      .faircare,
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-grid,
+      .story-grid {
+        gap: 40px;
+      }
+
+      .intro-visual,
+      .intro-visual img {
+        min-height: 360px;
+      }
+
+      .story-image,
+      .story-image img {
+        min-height: 420px;
+      }
+
+      .service-grid,
+      .clinic-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 35px;
+      }
+
+      .faircare-image {
+        min-height: 350px;
+      }
+
+      .faircare-copy {
+        padding: 60px 35px;
+      }
+
+      .faq-layout {
+        gap: 35px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .announcement {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+      }
+
+      .brand-name {
+        font-size: 34px;
+      }
+
+      h1 {
+        font-size: 53px;
+      }
+
+      h2 {
+        font-size: 41px;
+      }
+
+      .hero-content {
+        padding: 60px 22px;
+      }
+
+      .hero-image,
+      .hero-image img {
+        min-height: 330px;
+        height: 330px;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .service-grid,
+      .clinic-grid,
+      .expertise-grid,
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 350px;
+      }
+
+      .expertise-card {
+        min-height: 190px;
+      }
+
+      .story-values {
+        gap: 8px;
+      }
+
+      .story-value strong {
+        font-size: 21px;
+      }
+
+      .story-value span {
+        font-size: 8px;
+      }
+
+      .clinic-image {
+        height: 230px;
+      }
+
+      .clinic-address {
+        min-height: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .final-cta {
+        padding: 75px 20px;
+      }
+
+      .mobile-contact {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1001;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--black);
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+      }
+
+      .mobile-contact a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 58px;
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      .mobile-contact a + a {
+        border-left: 1px solid rgba(255,255,255,0.25);
+      }
+
+      body {
+        padding-bottom: 58px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Led by science · Driven by experience · Inspired by people
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="#home" class="brand" aria-label="ROZE home">
+        <span class="brand-name">ROZE</span>
+        <span class="brand-subtitle">BioHealth & BioDental Clinics</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#services">Our Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#clinics">Our Clinics</a>
+        <a href="#faircare">Faircare</a>
+        <a href="#contact" class="nav-cta">Book an Appointment</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+        <span class="eyebrow">A different approach to healthcare</span>
+
+        <h1>
+          Care that sees
+          <span>the whole you.</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover a considered approach to health and dentistry.
+          At ROZE, biological dentistry and integrative healthcare
+          come together around a more holistic patient experience.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#clinics" class="btn">
+            Find Your Clinic <span class="arrow">↗</span>
+          </a>
+
+          <a href="#about" class="btn btn-outline">
+            Discover ROZE <span class="arrow">↗</span>
+          </a>
+        </div>
+
+        <span class="hero-note">Dubai · BioHealth · BioDental</span>
+      </div>
+
+      <div class="hero-image image-frame">
+        <img
+          src="https://drroze.com/wp-content/uploads/holistic_approach.jpeg"
+          alt="ROZE holistic healthcare approach"
+          width="1200"
+          height="900"
+          fetchpriority="high"
+          decoding="async"
+          onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+        >
+      </div>
+
+    </section>
+
+    <!-- BRAND PRINCIPLES -->
+    <section class="principles">
+      <div class="container principles-inner">
+        <div class="principle">Led by science</div>
+        <div class="principle">Driven by experience</div>
+        <div class="principle">Inspired by people</div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section-padding" id="about">
+      <div class="container intro-grid">
+
+        <div class="intro-copy reveal">
+          <span class="eyebrow">Our philosophy</span>
+
+          <h2>
+            A holistic approach to health.
+          </h2>
+
+          <p>
+            Founded in 2013, ROZE focuses on sustainable, preventive
+            and protective medicine. Our approach brings healthcare
+            and dentistry together, recognising the relationship
+            between oral health and overall well-being.
+          </p>
+
+          <p>
+            We value thoughtful treatment planning, biocompatible
+            care and a multidisciplinary approach that considers
+            each patient's individual needs.
+          </p>
+
+          <a href="https://drroze.com/aboutus/" class="text-link" target="_blank" rel="noopener">
+            Discover our philosophy <span class="arrow">↗</span>
+          </a>
+        </div>
+
+        <div class="intro-visual image-frame reveal">
+          <img
+            src="https://drroze.com/wp-content/uploads/holistic_approach.jpeg"
+            alt="A holistic approach to health at ROZE"
+            width="1000"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICE PATHWAYS -->
+    <section class="section-padding services-section" id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Explore ROZE</span>
+          <h2>Three pathways.<br>One considered approach.</h2>
+          <p>
+            Explore the different areas of care at ROZE and find
+            the pathway that best matches your health needs.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2024/09/Jumeirah_inside_new.jpg"
+                alt="ROZE BioDental clinic interior"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+            <div class="service-card-content">
+              <span class="number">01 / BIODENTAL</span>
+              <h3>Biological Dentistry</h3>
+              <p>
+                A considered approach to oral health, with an emphasis
+                on biocompatible techniques and the connection
+                between the mouth and body.
+              </p>
+              <a href="https://drroze.com/biodental/" target="_blank" rel="noopener">
+                Explore BioDental <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2024/09/DIFC_inside_new.jpg"
+                alt="ROZE BioHealth clinic interior"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+            <div class="service-card-content">
+              <span class="number">02 / BIOHEALTH</span>
+              <h3>Integrative Healthcare</h3>
+              <p>
+                A multidisciplinary approach to health, bringing
+                together different areas of care and individual
+                patient assessment.
+              </p>
+              <a href="https://drroze.com/biohealth/" target="_blank" rel="noopener">
+                Explore BioHealth <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2025/01/roze_biohealth_faircare_1-1.webp"
+                alt="ROZE Faircare initiative"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+            <div class="service-card-content">
+              <span class="number">03 / FAIRCARE</span>
+              <h3>Faircare Initiative</h3>
+              <p>
+                An initiative designed to make qualifying dental
+                care more accessible to eligible members of
+                the UAE community.
+              </p>
+              <a href="#faircare">
+                Discover Faircare <span class="arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="section-padding">
+      <div class="container story-grid">
+
+        <div class="story-image image-frame reveal">
+          <img
+            src="https://drroze.com/wp-content/uploads/2024/09/Jumeirah_inside_new.jpg"
+            alt="The ROZE Jumeirah clinic environment"
+            width="1000"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+          >
+        </div>
+
+        <div class="story-copy reveal">
+          <span class="eyebrow">The ROZE difference</span>
+
+          <h2>People first.<br>Science always.</h2>
+
+          <p>
+            ROZE was founded on the belief that healthcare should
+            consider the person as a whole. Our approach combines
+            scientific knowledge, professional experience and
+            individual attention.
+          </p>
+
+          <p>
+            Our promise is guided by the principle
+            <em>Primum non nocere</em> — first, do no harm.
+            We aim to make every patient experience thoughtful,
+            respectful and centred on their needs.
+          </p>
+
+          <div class="story-values">
+            <div class="story-value">
+              <strong>Human</strong>
+              <span>Compassion</span>
+            </div>
+            <div class="story-value">
+              <strong>Elegant</strong>
+              <span>Consideration</span>
+            </div>
+            <div class="story-value">
+              <strong>Remarkable</strong>
+              <span>Excellence</span>
+            </div>
+          </div>
+
+          <a href="https://drroze.com/aboutus/" class="text-link" target="_blank" rel="noopener">
+            More about ROZE <span class="arrow">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section-padding expertise-section" id="expertise">
+      <div class="container">
+
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Our areas of care</span>
+          <h2>Expertise across disciplines.</h2>
+          <p>
+            Discover a range of dental and healthcare services
+            delivered across our Dubai clinics.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 4c2-2 4 0 5 0s3-2 5 0c3 3 1 8 0 12-1 4-3 5-4 2l-1-4-1 4c-1 3-3 2-4-2C5 12 4 7 7 4Z"/>
+              </svg>
+            </div>
+            <h3>Biological Dentistry</h3>
+            <p>Dental care informed by a biological and biocompatible approach.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/>
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+            </div>
+            <h3>Ceramic Implants</h3>
+            <p>Implant treatment options using ceramic materials.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3c4 4 7 7 7 11a7 7 0 0 1-14 0c0-4 3-7 7-11Z"/>
+                <path d="M9 15c.5 1.5 1.5 2 3 2"/>
+              </svg>
+            </div>
+            <h3>Ozone Therapy</h3>
+            <p>Ozone-based treatment options within selected dental protocols.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 18c3-8 5-12 8-12s5 4 8 12"/>
+                <path d="M7 18h10M9 14h6"/>
+              </svg>
+            </div>
+            <h3>Integrative Medicine</h3>
+            <p>Healthcare services with a focus on individual assessment and prevention.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 12h16M12 4v16"/>
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+            </div>
+            <h3>Biological Physiotherapy</h3>
+            <p>Movement and physical care services within the wider health journey.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 4 7v5c0 5 4 8 8 9 4-1 8-4 8-9V7l-8-4Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>BioAesthetics</h3>
+            <p>Aesthetic dental services designed around individual treatment planning.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PATIENT JOURNEY -->
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Your experience</span>
+          <h2>A more considered patient journey.</h2>
+          <p>
+            Clear information and thoughtful communication help
+            patients understand the next steps in their care.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+
+          <article class="journey-step reveal">
+            <span class="journey-number">01</span>
+            <h3>Connect</h3>
+            <p>Choose a clinic and get in touch with the ROZE team.</p>
+          </article>
+
+          <article class="journey-step reveal">
+            <span class="journey-number">02</span>
+            <h3>Understand</h3>
+            <p>Discuss your needs and share relevant health information.</p>
+          </article>
+
+          <article class="journey-step reveal">
+            <span class="journey-number">03</span>
+            <h3>Explore</h3>
+            <p>Learn about the available assessment and care options.</p>
+          </article>
+
+          <article class="journey-step reveal">
+            <span class="journey-number">04</span>
+            <h3>Move Forward</h3>
+            <p>Understand your proposed next steps with the care team.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIRCARE -->
+    <section class="faircare" id="faircare">
+
+      <div class="faircare-image image-frame">
+        <img
+          src="https://drroze.com/wp-content/uploads/2025/01/roze_biohealth_faircare_1-1.webp"
+          alt="ROZE Faircare programme"
+          width="1100"
+          height="900"
+          loading="lazy"
+          decoding="async"
+          onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+        >
+      </div>
+
+      <div class="faircare-copy reveal">
+        <span class="eyebrow">Care with accessibility in mind</span>
+        <h2>Introducing Faircare®.</h2>
+
+        <p>
+          ROZE's Faircare initiative aims to provide access to
+          dental care for qualifying individuals. The programme
+          covers 90% of medical expenses for eligible UAE residents
+          who work in the UAE and earn less than AED 3,500 per month.
+        </p>
+
+        <a href="https://drroze.com/faircare/" class="btn btn-light" target="_blank" rel="noopener">
+          Learn About Faircare <span class="arrow">↗</span>
+        </a>
+
+        <span class="faircare-note">
+          Eligibility conditions and programme terms apply.
+        </span>
+      </div>
+
+    </section>
+
+    <!-- CLINIC LOCATIONS -->
+    <section class="section-padding clinics-section" id="clinics">
+      <div class="container">
+
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Find us in Dubai</span>
+          <h2>Three clinics.<br>One ROZE experience.</h2>
+          <p>
+            Choose the clinic that is most convenient for you.
+            Contact the relevant team to arrange your appointment.
+          </p>
+        </div>
+
+        <div class="clinic-grid">
+
+          <!-- JUMEIRAH -->
+          <article class="clinic-card reveal">
+            <div class="clinic-image image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2024/09/Jumeirah_inside_new.jpg"
+                alt="Jumeirah ROZE BioDental Clinic"
+                width="900"
+                height="650"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+
+            <div class="clinic-content">
+              <span class="clinic-type">BioDental Clinic</span>
+              <h3>Jumeirah</h3>
+
+              <p class="clinic-address">
+                Villa 747, Jumeirah Beach Road,
+                Umm Suqeim 2, Dubai
+              </p>
+
+              <div class="clinic-details">
+                <p><strong>Phone:</strong> +971 4 388 1313</p>
+                <p><strong>Email:</strong> info@drroze.com</p>
+                <p><strong>Mon–Fri:</strong> 8:00 AM – 8:00 PM</p>
+                <p><strong>Sat–Sun:</strong> 8:00 AM – 6:00 PM</p>
+              </div>
+
+              <div class="clinic-actions">
+                <a href="tel:+97143881313">Call Clinic</a>
+                <a href="https://drroze.com/jumeirah/" target="_blank" rel="noopener">Clinic Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- DIFC -->
+          <article class="clinic-card reveal">
+            <div class="clinic-image image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2024/09/DIFC_inside_new.jpg"
+                alt="DIFC ROZE BioHealth Clinic"
+                width="900"
+                height="650"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+
+            <div class="clinic-content">
+              <span class="clinic-type">BioHealth Clinic</span>
+              <h3>DIFC</h3>
+
+              <p class="clinic-address">
+                Marble Walk, Gate Avenue 5,
+                DIFC, Dubai
+              </p>
+
+              <div class="clinic-details">
+                <p><strong>Phone:</strong> +971 4 385 8081</p>
+                <p><strong>Email:</strong> infodifc@drroze.com</p>
+                <p><strong>Mon–Thu:</strong> 8:00 AM – 7:00 PM</p>
+                <p><strong>Fri–Sun:</strong> 9:00 AM – 6:00 PM</p>
+              </div>
+
+              <div class="clinic-actions">
+                <a href="tel:+97143858081">Call Clinic</a>
+                <a href="https://drroze.com/difc/" target="_blank" rel="noopener">Clinic Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- THE GREENS -->
+          <article class="clinic-card reveal">
+            <div class="clinic-image image-frame">
+              <img
+                src="https://drroze.com/wp-content/uploads/2024/09/The_Greens.jpg"
+                alt="The Greens ROZE BioHealth Clinic"
+                width="900"
+                height="650"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.image-frame').classList.add('image-failed'); this.remove();"
+              >
+            </div>
+
+            <div class="clinic-content">
+              <span class="clinic-type">BioHealth Clinic</span>
+              <h3>The Greens</h3>
+
+              <p class="clinic-address">
+                Unit P2, R06, The Onyx Tower 1,
+                The Greens, Dubai
+              </p>
+
+              <div class="clinic-details">
+                <p><strong>Phone:</strong> +971 4 388 6765</p>
+                <p><strong>Email:</strong> infogreens@drroze.com</p>
+                <p><strong>Mon–Fri:</strong> 8:00 AM – 7:00 PM</p>
+                <p><strong>Sat–Sun:</strong> 9:00 AM – 6:00 PM</p>
+              </div>
+
+              <div class="clinic-actions">
+                <a href="tel:+97143886765">Call Clinic</a>
+                <a href="https://drroze.com/greens/" target="_blank" rel="noopener">Clinic Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding faq-section">
+      <div class="container faq-layout">
+
+        <div class="faq-intro reveal">
+          <span class="eyebrow">Helpful information</span>
+          <h2>Good to know.</h2>
+          <p>
+            A few useful details to help you get familiar with
+            ROZE and plan your first conversation with our team.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              What is biological dentistry?
+              <span class="faq-symbol">+</span>
+            </button>
+            <div class="faq-answer">
+              Biological dentistry considers oral health in relation
+              to the wider body and takes a biological approach
+              to dental assessment and treatment.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Where are ROZE clinics located?
+              <span class="faq-symbol">+</span>
+            </button>
+            <div class="faq-answer">
+              ROZE has clinics in Jumeirah, DIFC and The Greens
+              in Dubai. You can find the contact details and
+              opening hours for each location above.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How can I book an appointment?
+              <span class="faq-symbol">+</span>
+            </button>
+            <div class="faq-answer">
+              Choose your preferred clinic from the locations
+              section and contact its team by phone or email
+              to discuss an appointment.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the Faircare initiative?
+              <span class="faq-symbol">+</span>
+            </button>
+            <div class="faq-answer">
+              Faircare is a ROZE initiative that covers 90% of
+              medical expenses for qualifying individuals.
+              Eligibility requirements and programme conditions apply.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+      <span class="eyebrow">Your health journey starts here</span>
+
+      <h2>Let's make your next step a thoughtful one.</h2>
+
+      <p>
+        Connect with the ROZE team to learn more about our clinics,
+        services and approach to healthcare.
+      </p>
+
+      <a href="mailto:info@drroze.com" class="btn btn-light">
+        Contact ROZE <span class="arrow">↗</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <span class="brand-name">ROZE</span>
+            <span class="brand-subtitle">BioHealth & BioDental Clinics</span>
+          </a>
+
+          <p>
+            Led by science, driven by experience and inspired
+            by people. Discover a holistic approach to health
+            and dentistry in Dubai.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="#about">About ROZE</a>
+          <a href="#services">Our Services</a>
+          <a href="#expertise">Our Expertise</a>
+          <a href="#faircare">Faircare</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Clinics</h4>
+          <a href="https://drroze.com/jumeirah/" target="_blank" rel="noopener">Jumeirah</a>
+          <a href="https://drroze.com/difc/" target="_blank" rel="noopener">DIFC</a>
+          <a href="https://drroze.com/greens/" target="_blank" rel="noopener">The Greens</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <p>Dubai, United Arab Emirates</p>
+          <a href="mailto:info@drroze.com">info@drroze.com</a>
+          <a href="tel:+97143881313">+971 4 388 1313</a>
+          <a href="https://drroze.com/" target="_blank" rel="noopener">Official Website ↗</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> ROZE BioHealth & BioDental Clinics.</span>
+        <span>Led by Science · Driven by Experience · Inspired by People</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MOBILE QUICK ACTIONS -->
+  <div class="mobile-contact">
+    <a href="tel:+97143881313">Call Clinic</a>
+    <a href="#clinics">Find a Clinic</a>
+  </div>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    function closeMenu() {
+      mainNav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 800) closeMenu();
+    });
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faq-question");
+
+      question.addEventListener("click", () => {
+        const wasActive = item.classList.contains("active");
+
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".faq-question")
+            .setAttribute("aria-expanded", "false");
+        });
+
+        if (!wasActive) {
+          item.classList.add("active");
+          question.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // Reveal animations
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(element => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
+    }
+
+    // Footer year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Make failed image requests easy to identify during testing
+    document.querySelectorAll(".image-frame img").forEach(img => {
+      img.addEventListener("error", () => {
+        img.closest(".image-frame").classList.add("image-failed");
+      });
+    });
+  </script>
+
+</body>
+</html>
